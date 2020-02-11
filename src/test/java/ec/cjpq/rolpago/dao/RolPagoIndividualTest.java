@@ -22,9 +22,12 @@ public class RolPagoIndividualTest{
         jdbi.installPlugin(new SqlObjectPlugin());
 
         RolPagoIndividual o = jdbi.withExtension(RolPagoIndividualDao.class, dao -> {
-           return dao.getByCedula("0918056664"); 
+           //return dao.getObject("2020-02-07", "0918056664"); 
+           return dao.getObject("2020-02-08", "0920726973"); 
         });
 
+        logger.warn(o.getDescripcion());
         logger.warn(o.getEmpleadoNombre());
+        logger.warn(o.getLiquidopagar());
     }
 }
