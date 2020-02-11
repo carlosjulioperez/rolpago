@@ -1,0 +1,22 @@
+<?page id="indexPage" title="Rol de Pagos Móvil" contentType="text/html;charset=UTF-8"?>
+<zk>
+    <window id="indexWindow" apply="ec.cjpq.rolpago.security.controller.IndexController" border="normal" height="100%">
+        <borderlayout hflex="1" vflex="1">
+            <!-- <west width="260px" border="none" collapsible="true" splittable="true" minsize="300"> -->
+            <!--     <include src="/pages/layout/sidebar.zul"/> -->
+            <!-- </west> -->
+
+            <north border="none" collapsible="true" splittable="true" >
+                <include src="/pages/layout/sidebar.zul"/>
+            </north>
+
+            <center id="mainContent" autoscroll="true">
+                <include src="/pages/layout/main.zul"/>
+            </center>
+
+            <!-- <south border="none"> -->
+            <!--     <include src="/pages/layout/footer.zul"/> -->
+            <!-- </south> -->
+        </borderlayout>
+    </window>
+</zk>

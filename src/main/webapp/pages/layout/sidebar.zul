@@ -1,0 +1,8 @@
+<!-- <tree id="rootTree" hflex="0" vflex="1" apply="ec.cjpq.rolpago.security.controller.TreeController"> -->
+<!-- </tree> -->
+
+<toolbar id="tb" apply="ec.cjpq.rolpago.security.controller.ToolbarController" >
+    <toolbarbutton id="btnRolPago" label="Rol Pago" 	tooltiptext="Rol de Pago Individual" image="/img/database_gear.gif" />
+    
+    <toolbarbutton id="btnSalir" 	 label="Salir" 	tooltiptext="Cerrar sesión" image="/img/salir.gif" />
+</toolbar>

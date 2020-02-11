@@ -1,0 +1,12 @@
+act.sh
+*.log
+logs/*
+target/*
+.DS_Store
+.DS_Store?
+
+# swap
+[._]*.s[a-v][a-z]
+[._]*.sw[a-p]
+[._]s[a-v][a-z]
+[._]sw[a-p]
