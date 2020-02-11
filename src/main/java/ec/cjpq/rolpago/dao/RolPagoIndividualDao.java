@@ -11,7 +11,7 @@ public interface RolPagoIndividualDao {
     
     String sb = "SELECT " +
     "	c.DESCRIPCION, " +
-    "	e.apellidos+' '+nombres as empleadoNombre, " +
+    "	e.apellidos  || ' ' || nombres as empleadoNombre, " +
     "	d.diasTrabajados, " +
     "	d.horas50, " +
     "	d.horas100, " +
@@ -36,13 +36,14 @@ public interface RolPagoIndividualDao {
     "	nomina.ROLPAGO c, " +
     "	nomina.EMPLEADO e " +
     "WHERE" +
-    "	c.fecha = :fecha AND " +
+    // "	c.fecha = :fecha AND " +
     "	e.CEDULA = :cedula AND " +
     "	d.ROLPAGO_ID = c.id AND " +
     "	d.EMPLEADO_ID =e.ID ";
 
     //@SqlQuery("SELECT apellidos+' '+nombres as empleadoNombre FROM nomina.empleado WHERE cedula = :cedula")
     @SqlQuery(sb)
-    RolPagoIndividual getObject(@Bind("fecha") String fecha, @Bind("cedula") String cedula);
+    // RolPagoIndividual getObject(@Bind("fecha") String fecha, @Bind("cedula") String cedula);
+    RolPagoIndividual getObject(@Bind("cedula") String cedula);
 }
 

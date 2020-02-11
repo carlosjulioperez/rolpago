@@ -1,18 +1,100 @@
 <?page title="Rol de Pago Móvil" contentType="text/html;charset=UTF-8"?>
 <zk>
-    <vbox vflex="1" hflex="1">
-        <!-- <toolbarbutton id="btnConsultar" label="Consultar"		tooltiptext="Consultar registro" image="/img/database_refresh.gif" /> -->
+    <vbox vflex="1" hflex="1" apply="ec.cjpq.rolpago.composer.RolPagoIndividualComposer">
         
         <grid hflex="1">
             <columns><column width="50%" /></columns>
             <rows>
-                <row>
-                    <label value="Fecha (aaaa-mm-dd)"/>
-                    <textbox id="txtFecha" value="@{ctr.pojo.fecha}" maxlength="10" hflex="1"/>
-                </row>
+                <!-- <row> -->
+                <!--     <label value="Fecha (aaaa&#45;mm&#45;dd)"/> -->
+                <!--     <textbox id="txtFecha" maxlength="10" hflex="1"/> -->
+                <!-- </row> -->
                 <row>
                     <label value="Cédula" />
-                    <textbox value="@{ctr.pojo.cedula}" hflex="1"/>
+                    <textbox id="txtCedula" hflex="1"/>
+                </row>
+                <row>
+                    <button id="btnBuscar" label="Consultar" image="/img/database_refresh.gif"/>
+                </row>
+                <row>
+                    <label value="Empleado"/>
+                    <textbox value="@{ctr.pojo.empleadoNombre}" readonly="true" hflex="1" multiline="true" rows="2"/>
+                </row>
+                <row>
+                    <label value="Días trabajados"/>
+                    <textbox value="@{ctr.pojo.diasTrabajados}" readonly="true" hflex="1"/>
+                </row>
+                <row>
+                    <label value="Horas 50%"/>
+                    <textbox value="@{ctr.pojo.horas50}" readonly="true" hflex="1"/>
+                </row>
+                <row>
+                    <label value="Hotas 100%"/>
+                    <textbox value="@{ctr.pojo.horas100}" readonly="true" hflex="1"/>
+                </row>
+                <row>
+                    <label value="Total horas extras"/>
+                    <textbox value="@{ctr.pojo.totalHorasExtras}" readonly="true" hflex="1"/>
+                </row>
+                <row>
+                    <label value="Sueldo ganado"/>
+                    <textbox value="@{ctr.pojo.sueldoGanado}" readonly="true" hflex="1"/>
+                </row>
+                <row>
+                    <label value="Valor horas extra"/>
+                    <textbox value="@{ctr.pojo.valorHorasExtras}" readonly="true" hflex="1"/>
+                </row>
+                <row>
+                    <label value="Comisión"/>
+                    <textbox value="@{ctr.pojo.comision}" readonly="true" hflex="1"/>
+                </row>
+                <row>
+                    <label value="Subsidio familiar"/>
+                    <textbox value="@{ctr.pojo.subsidioFamiliar}" readonly="true" hflex="1"/>
+                </row>
+                <row>
+                    <label value="Décimo tercero"/>
+                    <textbox value="@{ctr.pojo.decimoTercero}" readonly="true" hflex="1"/>
+                </row>
+                <row>
+                    <label value="Décimo cuarto"/>
+                    <textbox value="@{ctr.pojo.decimoCuarto}" readonly="true" hflex="1"/>
+                </row>
+                <row>
+                    <label value="Vacaciones"/>
+                    <textbox value="@{ctr.pojo.vacaciones}" readonly="true" hflex="1"/>
+                </row>
+                <row>
+                    <label value="Fondos de reserva"/>
+                    <textbox value="@{ctr.pojo.fondosReserva}" readonly="true" hflex="1"/>
+                </row>
+                <row>
+                    <label value="Total de ingresos"/>
+                    <textbox value="@{ctr.pojo.totalIngresos}" readonly="true" hflex="1"/>
+                </row>
+                <row>
+                    <label value="IESS Personal"/>
+                    <textbox value="@{ctr.pojo.valorAporteIESSPersonal}" readonly="true" hflex="1"/>
+                </row>
+                <row>
+                    <label value="Préstamo quirografario"/>
+                    <textbox value="@{ctr.pojo.prestamosQuirografarios}" readonly="true" hflex="1"/>
+                </row>
+                <row>
+                    <label value="Anticipos/Préstamos"/>
+                    <textbox value="@{ctr.pojo.anticiposPrestamos}" readonly="true" hflex="1"/>
+                </row>
+                <row>
+                    <label value="Total descuentos"/>
+                    <textbox value="@{ctr.pojo.anticiposPrestamos}" readonly="true" hflex="1"/>
+                </row>
+                <row>
+                    <label value="Líquido a pagar"/>
+                    <textbox value="@{ctr.pojo.liquidoPagar}" readonly="true" hflex="1"/>
+                </row>
+                <row>
+                    <label value="IESS Patronal"/>
+                    <textbox value="@{ctr.pojo.valorAporteIESSPatronal}" readonly="true" hflex="1"/>
                 </row>
             </rows>
         </grid>

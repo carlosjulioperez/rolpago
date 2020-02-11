@@ -18,11 +18,13 @@ public class RolPagoIndividualTest{
     @Test
     public void dao(){
 
-        Jdbi jdbi = Jdbi.create("jdbc:hsqldb:hsql://localhost:1666", "sa", "");
+        // Jdbi jdbi = Jdbi.create("jdbc:hsqldb:hsql://localhost:1666", "sa", "");
+        Jdbi jdbi = Jdbi.create("jdbc:postgresql://localhost:5432/nomina", "postgres", "postgres");
         jdbi.installPlugin(new SqlObjectPlugin());
 
         RolPagoIndividual o = jdbi.withExtension(RolPagoIndividualDao.class, dao -> {
-           return dao.getObject("2020-02-07", "0918056664"); 
+           return dao.getObject("0918056664"); 
+           // return dao.getObject("2020-02-07", "0918056664"); 
            //return dao.getObject("2020-02-08", "0920726973"); 
         });
 
