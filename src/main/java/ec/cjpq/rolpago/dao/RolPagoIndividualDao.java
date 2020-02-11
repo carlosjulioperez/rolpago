@@ -12,7 +12,25 @@ public interface RolPagoIndividualDao {
     String sb = "SELECT " +
     "	c.DESCRIPCION, " +
     "	e.apellidos+' '+nombres as empleadoNombre, " +
-    "	d.LIQUIDOPAGAR " +
+    "	d.diasTrabajados, " +
+    "	d.horas50, " +
+    "	d.horas100, " +
+    "	d.totalHorasExtras, " +
+    "	d.sueldoGanado, " +
+    "	d.valorHorasExtras, " +
+    "	d.comision, " +
+    "	d.subsidioFamiliar, " +
+    "	d.decimoTercero, " +
+    "	d.decimoCuarto, " +
+    "	d.vacaciones, " +
+    "	d.fondosReserva, " +
+    "	d.totalIngresos, " +
+    "	d.valorAporteIESSPersonal, " +
+    "	d.prestamosQuirografarios, " +
+    "	d.anticiposPrestamos, " +
+    "	d.totalDescuentos, " +
+    "	d.liquidoPagar, " +
+    "	d.valorAporteIESSPatronal " +
     "FROM " +
     "	nomina.ROLPAGODETALLE d, " +
     "	nomina.ROLPAGO c, " +

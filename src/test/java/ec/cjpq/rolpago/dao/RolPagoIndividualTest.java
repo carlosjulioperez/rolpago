@@ -22,12 +22,30 @@ public class RolPagoIndividualTest{
         jdbi.installPlugin(new SqlObjectPlugin());
 
         RolPagoIndividual o = jdbi.withExtension(RolPagoIndividualDao.class, dao -> {
-           //return dao.getObject("2020-02-07", "0918056664"); 
-           return dao.getObject("2020-02-08", "0920726973"); 
+           return dao.getObject("2020-02-07", "0918056664"); 
+           //return dao.getObject("2020-02-08", "0920726973"); 
         });
 
         logger.warn(o.getDescripcion());
         logger.warn(o.getEmpleadoNombre());
-        logger.warn(o.getLiquidopagar());
+        logger.warn(o.getDiasTrabajados());
+        logger.warn(o.getHoras50());
+        logger.warn(o.getHoras100());
+        logger.warn(o.getTotalHorasExtras());
+        logger.warn(o.getSueldoGanado());
+        logger.warn(o.getValorHorasExtras());
+        logger.warn(o.getComision());
+        logger.warn(o.getSubsidioFamiliar());
+        logger.warn(o.getDecimoTercero());
+        logger.warn(o.getDecimoCuarto());
+        logger.warn(o.getVacaciones());
+        logger.warn(o.getFondosReserva());
+        logger.warn(o.getTotalIngresos());
+        logger.warn(o.getValorAporteIESSPersonal());
+        logger.warn(o.getPrestamosQuirografarios());
+        logger.warn(o.getAnticiposPrestamos());
+        logger.warn(o.getTotalDescuentos());
+        logger.warn(o.getLiquidoPagar());
+        logger.warn(o.getValorAporteIESSPatronal());
     }
 }
