@@ -1,22 +1,19 @@
 Parrot
-	* Cargar variables de entorno desde LXDE:
-		$ source ~/.profile
-
 	* Jetty:
 		$ mvn jetty:run -Djetty.http.port=9090
 		$ mvn -q jetty:run -Djetty.http.port=9090
 
+	* Test:
+		mvn test -Dtest=ec.cjpq.rolpago.AppTest
+		mvn test -Dtest=ec.cjpq.rolpago.dao.RolPagoIndividualTest
+
 	* Generación de proyecto:
-		
 		mvn archetype:generate -DgroupId=com.mycompany.app 
 		-DartifactId=my-app
 		-DarchetypeArtifactId=maven-archetype-quickstart 
 		-DarchetypeVersion=1.4 -DinteractiveMode=false
 
 		mvn archetype:generate -DgroupId=ec.cjpq.rolpago -DartifactId=rolpago -DarchetypeArtifactId=maven-archetype-webapp -DarchetypeVersion=1.4 -DinteractiveMode=false
-	* Test:
-		mvn test -Dtest=ec.cjpq.rolpago.AppTest
-		mvn test -Dtest=ec.cjpq.rolpago.sl.dao.EmployeeDaoTest
-
+	
 	* HSQLDB:
 		Versión 2.3.2

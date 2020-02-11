@@ -18,13 +18,13 @@ public class RolPagoIndividualTest{
     @Test
     public void dao(){
 
-        Jdbi jdbi = Jdbi.create("jdbc:postgresql://localhost:5432/oymar", "postgres", "");
+        Jdbi jdbi = Jdbi.create("jdbc:hsqldb:hsql://localhost:1666", "sa", "");
         jdbi.installPlugin(new SqlObjectPlugin());
 
         RolPagoIndividual o = jdbi.withExtension(RolPagoIndividualDao.class, dao -> {
            return dao.getByCedula("0918056664"); 
         });
 
-        logger.warn(o.getNombreEmpleado());
+        logger.warn(o.getEmpleadoNombre());
     }
 }

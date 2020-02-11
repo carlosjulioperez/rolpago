@@ -9,7 +9,7 @@ import ec.cjpq.rolpago.model.RolPagoIndividual;
 @RegisterBeanMapper(RolPagoIndividual.class)
 public interface RolPagoIndividualDao {
 
-    @SqlQuery("SELECT * FROM nomina.empleado WHERE cedula = :cedula")
+    @SqlQuery("SELECT apellidos+' '+nombres as empleadoNombre FROM nomina.empleado WHERE cedula = :cedula")
     RolPagoIndividual getByCedula(@Bind("cedula") String cedula);
 }
 

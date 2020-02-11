@@ -4,5 +4,5 @@ import lombok.Data;
 
 @Data
 public class RolPagoIndividual{
-    private String nombreEmpleado;
+    private String empleadoNombre;
 }
