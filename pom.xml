@@ -19,7 +19,7 @@
 
         <jetty-maven-plugin.version>9.4.15.v20190215</jetty-maven-plugin.version>
 
-        <log4j.version>2.11.2</log4j.version>
+        <log4j.version>2.13.3</log4j.version>
         <disruptor.version>3.4.2</disruptor.version>
 
         <javax.servlet-api.version>4.0.1</javax.servlet-api.version>
