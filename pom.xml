@@ -30,7 +30,7 @@
         <lombok.version>1.18.4</lombok.version>
         <junit.version>4.12</junit.version>
         <!-- <shiro.version>1.4.0</shiro.version> -->
-        <shiro.version>1.2.3</shiro.version>
+        <shiro.version>1.8.0</shiro.version>
 
         <!-- https://www.zkoss.org/wiki/ZK_Installation_Guide/Setting_up_IDE/Maven/Resolving_ZK_Framework_Artifacts_via_Maven -->
         <!-- <zk.version>6.5.3</zk.version> -->
